@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "edit_history_tweet_ids": [
+        "1668651147274403846"
+      ],
+      "id": "1668651147274403846",
+      "text": "@JoeBiden Biden statement is a lie because the IRS changed form 1040 Schedule A for tax year 2022 and eliminated the deduction for “unreimbursed employee business expenses” I did someone’s 2022 rtn using TurboTax and her $2,000 OOP expense could not be deducted. Her tax increased by &gt; $200"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668647946399752192"
+      ],
+      "id": "1668647946399752192",
+      "text": "RT @dmills3710: Google Agrees To Pay $600M in Privacy Settlements Across U.S\n\nTaxpayers to Receive Refunds from $141M TurboTax Settlement:…"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668642189709135872"
+      ],
+      "id": "1668642189709135872",
+      "text": "RT @SteveHiltonx: California highest unemployment (except DC and NV):\nhttps://t.co/UUof85Xnzd\n\nCalifornia 50th out of 50 for business clima…"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668636667127689216"
+      ],
+      "id": "1668636667127689216",
+      "text": "RT @dmills3710: Google Agrees To Pay $600M in Privacy Settlements Across U.S\n\nTaxpayers to Receive Refunds from $141M TurboTax Settlement:…"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668631936334708737"
+      ],
+      "id": "1668631936334708737",
+      "text": "RT @dmills3710: Google Agrees To Pay $600M in Privacy Settlements Across U.S\n\nTaxpayers to Receive Refunds from $141M TurboTax Settlement:…"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668631142235529216"
+      ],
+      "id": "1668631142235529216",
+      "text": "RT @dmills3710: Google Agrees To Pay $600M in Privacy Settlements Across U.S\n\nTaxpayers to Receive Refunds from $141M TurboTax Settlement:…"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668630709983125506"
+      ],
+      "id": "1668630709983125506",
+      "text": "Google Agrees To Pay $600M in Privacy Settlements Across U.S\n\nTaxpayers to Receive Refunds from $141M TurboTax Settlement:\n\nhttps://t.co/BNZB1cthwl\n\nhttps://t.co/SPH9rEPJyW"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668618096536592385"
+      ],
+      "id": "1668618096536592385",
+      "text": "We're so proud of you, Emerson and Steven! 👏\n\nA special thank you to the educators that helped make this possible! \n\nLearn more about this program https://t.co/sed25K1Ajb\n\n#EduTwitter #Scholarship #CSR https://t.co/hD2mDXpNNe"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668608172838502401"
+      ],
+      "id": "1668608172838502401",
+      "text": "RT @SteveHiltonx: California highest unemployment (except DC and NV):\nhttps://t.co/UUof85Xnzd\n\nCalifornia 50th out of 50 for business clima…"
+    },
+    {
+      "edit_history_tweet_ids": [
+        "1668602343103889409"
+      ],
+      "id": "1668602343103889409",
+      "text": "@diabolicalfairy Turbotax, just get turbotax it makes it so much easier"
+    }
+  ],
+  "meta": {
+    "newest_id": "1668651147274403846",
+    "oldest_id": "1668602343103889409",
+    "result_count": 10,
+    "next_token": "b26v89c19zqg8o3fqkj1lclvjec4zyukkpug4bh9v78fx"
+  }
+}
+
+
