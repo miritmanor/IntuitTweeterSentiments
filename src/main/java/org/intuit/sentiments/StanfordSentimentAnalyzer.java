@@ -1,19 +1,15 @@
-package org.intuit;
+package org.intuit.sentiments;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.sentiment.SentimentCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.intuit.interfaces.SentimentAnalyzer;
-import org.intuit.objects.Sentiment;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Properties;
 
 
@@ -29,7 +25,6 @@ public class StanfordSentimentAnalyzer implements SentimentAnalyzer {
             Properties props = new Properties();
             // edu/stanford/nlp/models/sentiment/sentiment.ser.gz
             props.setProperty("annotators", "tokenize, ssplit, parse, sentiment");
-            //props.setProperty("sentiment.model", "src/main/resources/sentiment.ser.gz");
             pipeline = new StanfordCoreNLP(props);
         } catch (Exception e) {
             logger.error("failed to initialize stanford lib: "+e);

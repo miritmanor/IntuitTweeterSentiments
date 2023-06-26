@@ -1,4 +1,4 @@
-package trendingdata;
+package org.intuit.trendingdata;
 
 import lombok.Data;
 
@@ -13,7 +13,7 @@ public class TweetsGroup {
     public static class TweetData {
         private String id;
         private String text;
-        private List<String> edit_history_tweet_ids;
+        //private List<String> edit_history_tweet_ids;
 
     }
 

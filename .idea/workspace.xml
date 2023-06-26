@@ -4,14 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f477c5d4-e459-43af-92e7-1f9dacdad129" name="Changes" comment="" />
+    <list default="true" id="f477c5d4-e459-43af-92e7-1f9dacdad129" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/RestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/RestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/TweeterSentiments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/TweeterSentiments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/messagebroker/TweetEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/messagebroker/TweetEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/messagebroker/TweetsQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/messagebroker/TweetsQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/messagebroker/TweetsTextQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/messagebroker/TweetsTextQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/persisttweets/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/persisttweets/Tweet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/persisttweets/TweetsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/persisttweets/TweetsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/MockSentimentAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/MockSentimentAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/Sentiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/Sentiment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/SentimentAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/SentimentAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/SentimentTagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/SentimentTagger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/StanfordSentimentAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/sentiments/StanfordSentimentAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/LastTweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/LastTweet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/MockData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/MockData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/PersistRawAPIResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/PersistRawAPIResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/TrendDataAcquisition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/TrendDataAcquisition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/TweetsGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/TweetsGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/TwitterAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/intuit/trendingdata/TwitterAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -32,9 +70,119 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "G:/My Drive/prog/java-spring-boot/IntuitTweeterSentiments/src/main/resources"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\My Drive\prog\java-spring-boot\IntuitTweeterSentiments\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\My Drive\prog\java-spring-boot\IntuitTweeterSentiments\storage" />
+      <recent name="G:\My Drive\prog\java-spring-boot\IntuitTweeterSentiments\src\main\java\org\intuit\save" />
+      <recent name="G:\My Drive\prog\java-spring-boot\IntuitTweeterSentiments\src\main\resources\edu\stanford\nlp\models\sentiment" />
+      <recent name="G:\My Drive\prog\java-spring-boot\IntuitTweeterSentiments\src\main\resources\edu\stanford\nlp\models\lexparser" />
+      <recent name="G:\My Drive\prog\java-spring-boot\IntuitTweeterSentiments" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.primary">
+    <configuration name="primary" type="Application" factoryName="Application">
+      <envs>
+        <env name="BEARER_TOKEN" value="AAAAAAAAAAAAAAAAAAAAAGYnoQEAAAAAvS20PItEsTLUxxkwIm1%2BsIHLPrQ%3D0VN0AzAuRsqFxMRtNeAjivJAbzTaRIkZw1lNdj7TS2rBVvABRX" />
+        <env name="TWITTER_API_URI" value="https://api.twitter.com/2/tweets/search/recent" />
+        <env name="STORAGE_FOLDER" value="storage" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="org.intuit.TweeterSentiments" />
+      <module name="TweeterSentiments" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="IntuitTweeterSentiments" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="IntuitTweeterSentiments" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TweeterSentiments" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="IntuitTweeterSentiments" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="IntuitTweeterSentiments" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.primary" />
+      <item itemvalue="Maven.TweeterSentiments" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -1,4 +1,4 @@
-package org.intuit.persist;
+package org.intuit.persisttweets;
 
 
 import jakarta.persistence.*;

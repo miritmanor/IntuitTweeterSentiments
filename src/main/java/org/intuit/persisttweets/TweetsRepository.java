@@ -1,7 +1,6 @@
-package org.intuit.persist;
+package org.intuit.persisttweets;
 
 import org.intuit.sentiments.Sentiment;
-import org.intuit.persist.Tweet;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

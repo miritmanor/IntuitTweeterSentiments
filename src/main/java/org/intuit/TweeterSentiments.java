@@ -19,8 +19,6 @@ public class TweeterSentiments {
     public static void main(String[] args) throws IOException, URISyntaxException {
 
         ApplicationContext context = SpringApplication.run(TweeterSentiments.class, args);
-        //GetTweets tweets = context.getBean(GetTweets.class);
-        //tweets.getTweets();
     }
 
 }

@@ -5,22 +5,16 @@ import org.springframework.stereotype.Component;
 import java.util.Random;
 
 
-// moving forward the plan is for it to be a separate application, listening for queue messages
-
 /***
- * Analyze sentiments
- * Trivial implementation
- * In practice should use at least an existing language model, and preferably be trained based on relevant data
- * Currenly returns sentiment - a single value. In practice will usually specify % for each sentiment (positive, negative, neutral)
- *  and then need some threshold that determines the resuling sentiment
+ * Analyze sentiments - trivial implementation - random, for testing
  */
 
 @Component
-public class TrivialSentimentAnalyzerAnalyzer implements SentimentAnalyzer {
+public class MockSentimentAnalyzer implements SentimentAnalyzer {
 
     private Random random;
 
-    TrivialSentimentAnalyzerAnalyzer() {
+    MockSentimentAnalyzer() {
         random=new Random();
     }
     @Override

@@ -1,5 +1,8 @@
-package org.intuit;
+package org.intuit.messagebroker;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.intuit.sentiments.SentimentTagger;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -14,29 +17,27 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class TweetsTextQueue extends RabbitMQAccess {
-    static final String topicExchangeName = "tweetsText";
-    static final String queueName = "tweetsText";
-    static final String routingKey = "";
-    static final String receiveMessagesMethodName ="receiveMessage";
+public class TweetsTextQueue implements TweetsQueue {
+    String topicExchangeName = "tweetsText";
+    String queueName = "tweetsText";
+    String routingKey = "";
+    String receiveMessagesMethodName ="receiveMessage";
 
-    // todo this is too specific - need an interface here
-    //private SentimentAnalyzer receiver;
+    RabbitTemplate rabbitTemplate;
 
-    public TweetsTextQueue(RabbitTemplate rabbitTemplate, SentimentAnalyzer receiver) {
-        super(rabbitTemplate);
-        //this.receiver = receiver;
+    private static final Logger logger = LogManager.getLogger(TweetsTextQueue.class);
+    public TweetsTextQueue(RabbitTemplate rabbitTemplate) {
+        this.rabbitTemplate = rabbitTemplate;
     }
 
-    @Bean
     Queue queue() {
         return new Queue(queueName, false);
     }
-    @Bean
+
     TopicExchange exchange() {
         return new TopicExchange(topicExchangeName);
     }
-    @Bean
+
     Binding binding(Queue queue, TopicExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(routingKey);
     }
@@ -52,8 +53,8 @@ public class TweetsTextQueue extends RabbitMQAccess {
     }
 
     @Bean
-    MessageListenerAdapter listenerAdapter(SentimentTagger sentimentTagger) {
-        return new MessageListenerAdapter(sentimentTagger, receiveMessagesMethodName);
+    public MessageListenerAdapter listenerAdapter(SentimentTagger service) {
+        return new MessageListenerAdapter(service, receiveMessagesMethodName);
     }
 
     public void sendEvent(String message ) {

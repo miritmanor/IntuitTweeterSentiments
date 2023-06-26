@@ -1,4 +1,4 @@
-package org.intuit.objects;
+package org.intuit.messagebroker;
 
 import lombok.Data;
 

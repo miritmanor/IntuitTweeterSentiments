@@ -1,4 +1,4 @@
-package org.intuit.objects;
+package org.intuit.sentiments;
 
 public enum Sentiment {
     positive,

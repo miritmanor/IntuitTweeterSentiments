@@ -1,6 +1,7 @@
-package trendingdata;
+package org.intuit.trendingdata;
 
-import interfaces.TrendDataAcquisition;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -13,28 +14,36 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import org.intuit.messagebroker.TweetsQueue;
+import org.intuit.messagebroker.TweetsTextQueue;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
 
 @Component
-public class TwitterAPI implements TrendDataAcquisition {
+@Primary
+public class TwitterAPI extends TrendDataAcquisition {
+    private String bearerToken=null;
+    private HttpClient httpClient=null;
+    private final String URI;
 
-    //String bearerToken="AAAAAAAAAAAAAAAAAAAAAA3hfAEAAAAAKeYPU6ntjNTx288mpuHc4hNm6bA%3D5yDS1Ps7aLHms4q2tk91fUTLb4c8ChkxXjFJn0QaeMYUc2kmwO";
-    String bearerToken=null;
-    HttpClient httpClient=null;
-    String URI="https://api.twitter.com/2/tweets/search/recent";
-    HttpGet httpGet=null;
-    String searchString="intuit";
+    @Autowired
+    private LastTweet lastTweet;
 
 
-    TwitterAPI() {
 
-        // TODO get bearer token from env
-        bearerToken="AAAAAAAAAAAAAAAAAAAAAN%2FkoAEAAAAAV9TaUI2mx%2BqXoB9UM7aSRusTsDQ%3Dhv4vDVi5dDQjLNru7PpyS2DZGjp32SI3bhtDWZJhOVd0giD4P5";
+    private static final Logger logger = LogManager.getLogger(TwitterAPI.class);
 
-        // TODO get last tweet so that we start from where we left off
+    // Using search/recent API
+
+    TwitterAPI(TweetsQueue tweetsTextQueue) {
+        super(tweetsTextQueue);
+
+        bearerToken = System.getenv("BEARER_TOKEN");
+        URI = System.getenv("TWITTER_API_URI"); //"https://api.twitter.com/2/tweets/search/recent";
 
         try {
             httpClient = HttpClients.custom()
@@ -42,23 +51,45 @@ public class TwitterAPI implements TrendDataAcquisition {
                             .setCookieSpec(CookieSpecs.STANDARD).build())
                     .build();
 
-            // TODO get URI from env
+
+        } catch (Exception e) {
+            logger.error("Something went wrong: "+e.getMessage());
+        }
+    }
+
+    private HttpGet buildHttpGetRequest() {
+        HttpGet httpGet;
+
+        // minimal implementation, ir order to not exhaust the API
+        // actually should set maxTweets to 100 (the maximum) and get all the available ones (groups of 10)
+        // then proceed to see if there is more, until no further tweets available.
+
+        // todo get search string and maxtweets from environment
+        String searchString="(Intuit OR TurboTax OR QuickBooks OR Mailchimp) lang:en ";
+        String maxTweets="10";
+
+        try {
             URIBuilder uriBuilder = new URIBuilder(URI);
             ArrayList<NameValuePair> queryParameters;
 
-            // TODO search for last tweet in order to create the correct query, also add handling for missing lont time periods that require extended search
             queryParameters = new ArrayList<>();
             queryParameters.add(new BasicNameValuePair("query", searchString));
+            queryParameters.add(new BasicNameValuePair("max_results", maxTweets));
+            if (lastTweet.getLastTweet() != null) {
+                logger.info("Starting from tweet "+lastTweet.getLastTweet());
+                queryParameters.add(new BasicNameValuePair("since_id", lastTweet.getLastTweet()));
+            }
             uriBuilder.addParameters(queryParameters);
 
             httpGet = new HttpGet(uriBuilder.build());
             httpGet.setHeader("Authorization", String.format("Bearer %s", bearerToken));
             httpGet.setHeader("Content-Type", "application/json");
+            return httpGet;
         } catch (Exception e) {
-            System.out.println("Something went wrong: "+e.getMessage());
+            logger.error("Something went wrong: "+e.getMessage());
+            return null;
         }
     }
-
 
     /***
      * Get a batch of tweets from Twitter API
@@ -75,24 +106,29 @@ public class TwitterAPI implements TrendDataAcquisition {
      */
 
     public String getNext() {
-        String searchResponse = null;
+        String searchResponse;
 
         try {
-            HttpResponse response = httpClient.execute(httpGet);
-            System.out.println(response);
+            HttpResponse response = httpClient.execute(buildHttpGetRequest());
+            logger.info(response);
             HttpEntity entity = response.getEntity();
-            if (null != entity) {
+            if (entity != null) {
                 searchResponse = EntityUtils.toString(entity, "UTF-8");
+                try {
+                    handleTweetsGroup(searchResponse.toString());
+                } catch (Exception e) {
+                    logger.error("Failed to handle tweets - "+e.getMessage());
+                }
+                return searchResponse;
             }
-            return searchResponse;
+            return "";
         } catch (Exception e) {
-            System.out.println("Error while getting tweets: "+e.getMessage());
+            logger.error("Error while getting tweets: "+e.getMessage());
             return("");
         }
 
 
 
-        // TODO persist the response
     }
 
 }
